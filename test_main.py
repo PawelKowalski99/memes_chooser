@@ -1,5 +1,5 @@
 import pytest
-from memes_chooser.main import calculate
+from main import calculate
 import logging
 
 
@@ -32,8 +32,8 @@ import logging
                                   ('yodeling_kid.avi', 605, 12)],
                               logging.error("There are no memes inside list or usb size is <= 0")),
                              (-2, [('rollsafe.jpg', 205, 6),
-                                  ('sad_pepe_compilation.gif', 410, 10),
-                                  ('yodeling_kid.avi', 605, 12)],
+                                   ('sad_pepe_compilation.gif', 410, 10),
+                                   ('yodeling_kid.avi', 605, 12)],
                               logging.error("There are no memes inside list or usb size is <= 0"))
                          ])
 def test_calculate(usb_size, memes, result):
