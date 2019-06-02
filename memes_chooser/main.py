@@ -37,6 +37,3 @@ def calculate(usb_size, memes):
     memes_table[memes_number][usb_size] = memes_table[memes_number][usb_size].split(" ")
     memes_table[memes_number][usb_size].remove("")
     return values_table[memes_number][usb_size], set(memes_table[memes_number][usb_size])
-
-
-print(calculate(1, []))
