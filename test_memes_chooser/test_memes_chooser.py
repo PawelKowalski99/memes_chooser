@@ -25,7 +25,11 @@ from memes_chooser.main import calculate
                                   ('yodeling_kid.avi', 605, 12)],
                               (22, {'sad_pepe_compilation.gif', 'yodeling_kid.avi'})
                               ),
-
+                             (1, [], "There are no memes inside list or usb size is 0"),
+                             (0, [('rollsafe.jpg', 205, 6),
+                                  ('sad_pepe_compilation.gif', 410, 10),
+                                  ('yodeling_kid.avi', 605, 12)],
+                              "There are no memes inside list or usb size is 0"),
                          ])
 def test_calculate(usb_size, memes, result):
     assert result == calculate(usb_size, memes)
