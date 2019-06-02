@@ -62,3 +62,33 @@ For a given input
             1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
             1    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
             1    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
+            
+            
+## Description for first problem
+ 
+Zaimplementuj funkcję o nazwie: merge, która przyjmuje dwa argumenty: persons_file i visits_file. Funkcja łączy dane z dwóch plików podanych jako argumenty wywołania. persons_file to obiekt plikowy CSV zawierający dane użytkownika w formie: id, name, surname. visits_file to obiekt plikowy CSV, który zawiera dane w formie: id, person_id, site, gdzie person_id to id danego użytkownika.
+### Solution for first problem
+
+    import csv
+
+
+    def merge(persons_file, visits_file):
+        dict_users = {}
+        pf_reader = csv.reader(persons_file, delimiter=',')
+        next(pf_reader)
+        for row in pf_reader:
+            user = {
+                row[0]: {
+                    "id": row[0],
+                    "name": row[1],
+                    "surname": row[2],
+                    "visits": 0,
+                }
+            }
+            dict_users.update(user)
+        vf_reader = csv.reader(visits_file, delimiter=',')
+        next(vf_reader)
+        for row in vf_reader:
+            if row[1] in dict_users.keys():
+                dict_users[row[1]]['visits'] += 1
+        return list(dict_users.values())
