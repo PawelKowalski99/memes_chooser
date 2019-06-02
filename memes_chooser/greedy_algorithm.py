@@ -8,7 +8,7 @@ memes_list = [
 
 def greedy_algorithm(usb_size, memes):
     """
-    Function that solves rucksack problem. Calculates the most cost-effective packing memes into usb
+    Function that solves rucksack problem in greedy way. Calculates the most cost-effective packing memes into usb
     :param usb_size: int that is size of usb in GiBs
     :param memes: list of tuples where every tuple is different memes_chooser. Tuples indexes are name, size of memes_chooser in MiB(int),
                                                                                                     value of memes_chooser
