@@ -7,7 +7,7 @@ def calculate(usb_size, memes):
     """
     n = len(memes)
     memes = list(set(memes))
-    usb_size = int(usb_size*1024)
+    usb_size = int(usb_size * 1024)
     value_table = [[0 for _ in range(usb_size + 1)] for _ in range(n + 1)]
     memes_table = [['' for _ in range(usb_size + 1)] for _ in range(n + 1)]
 
