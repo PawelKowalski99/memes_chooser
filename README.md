@@ -64,10 +64,10 @@ For a given input
             1    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
             
             
-## Description for first problem
+## Description for the first problem
  
 Zaimplementuj funkcję o nazwie: merge, która przyjmuje dwa argumenty: persons_file i visits_file. Funkcja łączy dane z dwóch plików podanych jako argumenty wywołania. persons_file to obiekt plikowy CSV zawierający dane użytkownika w formie: id, name, surname. visits_file to obiekt plikowy CSV, który zawiera dane w formie: id, person_id, site, gdzie person_id to id danego użytkownika.
-### Solution for first problem
+### Solution for the first problem
 
     import csv
 
