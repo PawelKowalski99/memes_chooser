@@ -1,3 +1,6 @@
+import logging
+
+
 def calculate(usb_size, memes):
     """
     Knapsack problem solved by a bottom-up approach.
@@ -5,8 +8,8 @@ def calculate(usb_size, memes):
     :param memes: list of memes in: [(name_meme, size in MiB, value), ...]
     :return: (optimal value, {set of optimal memes to be inside usb})
     """
-    if len(memes) == 0 or usb_size == 0:
-        return "There are no memes inside list or usb size is 0"
+    if len(memes) == 0 or usb_size <= 0:
+        return logging.error("There are no memes inside list or usb size is <= 0")
     memes_number = len(memes)
     memes = list(set(memes))
     usb_size = int(usb_size * 1024)
