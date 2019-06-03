@@ -23,9 +23,11 @@ Firstly clone the repository. When you have got it cloned install all requiremen
     
     pip install -r /path/to/requirements.txt
 Function is inside main.py folder.<br>
-If you want to download tests just install:
+If you want to run tests just install:
     
     pip install -r /path/to/requirements_test.txt
+    
+and type pytest in the console.
     
 ## Performance test
 
